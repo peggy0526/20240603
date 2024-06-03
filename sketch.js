@@ -52,6 +52,8 @@ function draw() {
   translate(cam.width, 0);
   scale(-1, 1);
   image(cam, 0, 0);
+  text("412730201 陳妍希")
+ 
 }
 
 function drawSkeleton() {
@@ -125,14 +127,5 @@ function drawSkeleton() {
   16 right foot
 */
 
-function preload(){	
-	rightEyeImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
-  push()
-	translate(pose.rightEye.x, pose.rightEye.y) //以找到的右耳位置當作座標原點
-	imageMode(CENTER); //圖片要以中心點為座標點
-	scale(-1,1)  //左右翻轉
-	scale(0.1)   //縮小到0.1
-	image(rightEyeImg,0, 0) //顯示該圖片
-pop()
-}
+
 
