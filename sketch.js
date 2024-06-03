@@ -65,6 +65,17 @@ function drawSkeleton() {
   for (let i = 0; i < poses.length; i++) {
     pose = poses[i];
     // shoulder to wrist
+
+    partA = pose.keypoints[0];
+
+    if(partA.score > 0.1){
+      push()
+        textSize(40)
+        scale(-1,1)
+        text("412730201,陳妍希",partA.x-width,partA.y-150)
+      pop()
+    }
+    
     for (j = 5; j < 9; j++) {
       if (pose.keypoints[j].score > 0.1 && pose.keypoints[j + 2].score > 0.1) {
         partA = pose.keypoints[j];
