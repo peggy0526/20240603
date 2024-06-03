@@ -124,3 +124,7 @@ function drawSkeleton() {
   15 left foot
   16 right foot
 */
+
+function preload(){	
+	rightEarImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
+}
