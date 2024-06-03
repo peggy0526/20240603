@@ -126,5 +126,14 @@ function drawSkeleton() {
 */
 
 function preload(){	
-	rightEarImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
+	rightEyeImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
+  if(pose.rightEar.confidence>0.7){
+    push()
+      translate(pose.rightEye.x, pose.rightEye.y)
+      imageMode(CENTER);
+      scale(-1,1)
+      scale(0.1)
+      image(rightEarImg,0, 0)
+      pop()
+  }
 }
