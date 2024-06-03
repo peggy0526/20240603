@@ -9,7 +9,7 @@ let video, bodypose, pose, keypoint, detector;
 let poses = [];
 
 function preload(){	
-	carImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca")	
+	carImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
 }
 
 
@@ -87,10 +87,10 @@ function drawSkeleton() {
     partA = pose.keypoints[5];
     partB = pose.keypoints[6];
     if (partA.score > 0.1 && partB.score > 0.1) {
-        line(partA.x, partA.y, partB.x, partB.y);
+        //line(partA.x, partA.y, partB.x, partB.y);
     push()
-      image(carImg,partA.x-75, partA.y-75,150,150)
-      image(carImg,partB.x-75, partB.y-75,150,150)
+      image(carImg,partA.x-75, partA.y-75,150,150)  //左邊肩膀
+      image(carImg,partB.x-75, partB.y-75,150,150)  //右邊肩膀
     pop()
       
       
