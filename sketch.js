@@ -5,13 +5,13 @@ https://www.tensorflow.org/hub/tutorials/movenet
 
 */
 
-let video, bodypose, pose, keypoint, detector;
-let poses = [];
 
 function preload(){	
 	carImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
 }
 
+let video, bodypose, pose, keypoint, detector;
+let poses = [];
 
 async function init() {
   const detectorConfig = {
