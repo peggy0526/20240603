@@ -127,13 +127,12 @@ function drawSkeleton() {
 
 function preload(){	
 	rightEyeImg= loadImage("upload_fc4425b4ca387e988f6909176caae0ca.gif")	
-  if(pose.rightEar.confidence>0.7){
-    push()
-      translate(pose.rightEye.x, pose.rightEye.y)
-      imageMode(CENTER);
-      scale(-1,1)
-      scale(0.1)
-      image(rightEarImg,0, 0)
-      pop()
-  }
+  push()
+	translate(pose.rightEye.x, pose.rightEye.y) //以找到的右耳位置當作座標原點
+	imageMode(CENTER); //圖片要以中心點為座標點
+	scale(-1,1)  //左右翻轉
+	scale(0.1)   //縮小到0.1
+	image(rightEyeImg,0, 0) //顯示該圖片
+pop()
 }
+
